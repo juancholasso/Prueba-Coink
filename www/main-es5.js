@@ -627,7 +627,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /home/juanpablo/Development/Coink/coink/src/main.ts */
+    /*! /home/juanpablo/Development/Coink/Prueba-Coink/src/main.ts */
     "./src/main.ts");
     /***/
   }
