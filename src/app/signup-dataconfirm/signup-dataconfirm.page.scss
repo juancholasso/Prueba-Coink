@@ -1,0 +1,24 @@
+.inplabel{
+    font-size: 1rem;
+}
+
+.vallabel{
+    color: #124B40;
+    opacity: 1 !important;
+    input.native-input.sc-ion-input-md{
+        opacity: 1 !important;
+    }
+    .native-input sc-ion-input-md{
+        opacity: 1 !important;
+    }
+}
+.titInfo{
+    color: #28675E;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.textInfo{
+    color: #757575;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        NÚMERO CELULAR
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content *ngIf="body != null">
+    <ion-item>
+      <ion-img class="" [src]="IMG_STATE"></ion-img>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-img class="imgCoink" [src]="IMG_COINK"></ion-img>
+        </ion-col>
+        <ion-col size="8" class="ion-align-self-center">
+          <ion-item>
+            <label class="titInfo">Configura tu cuenta</label>
+          </ion-item>
+          <ion-item>
+              <label class="textCelLabel">Para finalizar, por favor lee con detenimiento este documento</label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <hr class="hrCel">
+    <p class="info">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <div>
+      <ion-button (click)="next()" color="primary" expand="block" shape="round" class="btnRegister">Finalizar</ion-button>
+    </div>
+  </ion-content>
+  

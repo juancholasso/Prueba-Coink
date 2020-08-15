@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        NÚMERO CELULAR
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content *ngIf="body != null">
+    <ion-item>
+      <ion-img class="" [src]="IMG_STATE"></ion-img>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-img class="imgCoink" [src]="IMG_COINK"></ion-img>
+        </ion-col>
+        <ion-col size="8" class="ion-align-self-center">
+          <ion-item>
+            <label class="titInfo">¿Cuales son tus datos?</label>
+          </ion-item>
+          <ion-item>
+            <label class="textInfo">Ahora necesitamos saber algunos datos tuyos</label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <hr class="hrCel">
+    <ion-grid>
+      <form [formGroup]="form">
+        <ion-row>
+          <ion-item style="width: 100%;">
+            <ion-label class="inplabel">Tipo de documento</ion-label>
+            <ion-select placeholder="Tipo" [(ngModel)]="body.document_id" formControlName="document_id">
+              <ion-select-option value="1">Cédula de ciudadania</ion-select-option>
+              <ion-select-option value="2">Cédula de extranjería</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item style="width: 100%;">
+            <ion-label class="inplabel">Número de documento</ion-label>
+            <ion-input style="text-align: end;" inputmode="numeric" type="number" placeholder="#" [(ngModel)]="body.document_number" formControlName="document_number"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item style="width: 100%;">
+            <ion-label class="inplabel">Fecha de nacimiento</ion-label>
+            <ion-datetime displayFormat="DD/MM/YY" placeholder="Fecha" [(ngModel)]="body.birth_date" formControlName="birth_date"></ion-datetime>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+            <ion-item style="width: 100%;">
+              <ion-label class="inplabel">Fecha de expedición</ion-label>
+              <ion-datetime displayFormat="DD/MM/YY" min="{{body.birth_date}}" placeholder="Fecha" [(ngModel)]="body.document_expiration_date" formControlName="document_expiration_date"></ion-datetime>
+            </ion-item>
+          </ion-row>
+        <ion-row>
+          <ion-item style="width: 100%;">
+            <ion-label class="inplabel">Genero que aparece en tu documento</ion-label>
+            <ion-select placeholder="Tipo" [(ngModel)]="body.gender_id" formControlName="gender_id">
+              <ion-select-option value="1">Cédula de ciudadania</ion-select-option>
+              <ion-select-option value="2">Cédula de extranjería</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-row>
+      </form>
+    </ion-grid>
+    <div>
+      <ion-button (click)="next()" color="primary" expand="block" shape="round" class="btnRegister" [disabled]="form.invalid" >Continuar</ion-button>
+    </div>
+  </ion-content>
+  

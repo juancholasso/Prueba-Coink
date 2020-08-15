@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      NÚMERO CELULAR
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-img class="" [src]="IMG_STATE"></ion-img>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-img class="imgCoink" [src]="IMG_COINK"></ion-img>
+      </ion-col>
+      <ion-col size="8" class="ion-align-self-center">
+          <label class="textCelLabel">Para comenzar, por favor
+              ingresa <p class="textCel">tu número celular</p></label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="hrCel">
+  <ion-item>
+    <ion-img class="" [src]="IMG_COL"></ion-img>
+    <ion-input type="number" [(ngModel)]="body.phone_number" value=""></ion-input>
+  </ion-item>
+  <div>
+      <ion-button (click)="next()" color="primary" expand="block" shape="round" class="btnRegister">Continuar</ion-button>
+    </div>
+</ion-content>
